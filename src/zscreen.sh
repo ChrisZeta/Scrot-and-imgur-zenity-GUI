@@ -3,7 +3,7 @@
 # zscreen script by Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
 
 cd ~
-if [ ! -d "Screenshot" ]
+if [ ! -d "Screenshots" ]
 then mkdir ~/Screenshot
 fi
 
@@ -15,24 +15,24 @@ case $ans in
 
 zenity --question --text "Do you want upload the screenshot?"
 if [ "$?" = "0" ]; then 
-scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshot/ & zimgur ~/Screenshot/$f'
+scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshots/ & zimgur ~/Screenshots/$f'
 else
-scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshot/'
+scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshots/'
 fi;;
 
 "Now" ) zenity --question --text "Do you want upload the screenshot?"
 if [ "$?" = "0" ]; then 
-scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshot/ & zimgur ~/Screenshot/$f'
+scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshots/ & zimgur ~/Screenshots/$f'
 else
-scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshot/'
+scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshots/'
 fi;;
 
 "With delay" ) d=$(zenity --entry --title="Second delay" --text="Enter second of delay:" --entry-text "5")
 zenity --question --text "Do you want upload the screenshot?"
 if [ "$?" = "0" ]; then 
-scrot -d "$d" '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshot/ & zimgur ~/Screenshot/$f'
+scrot -d "$d" '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshots/ & zimgur ~/Screenshots/$f'
 else
-scrot -d "$d" '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshot/'
+scrot -d "$d" '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Screenshots/'
 fi;;
 
 esac
