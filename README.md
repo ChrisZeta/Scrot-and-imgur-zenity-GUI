@@ -1,2 +1,42 @@
-Scrot-and-imgur-zenity-GUI
-==========================
+|====================================|
+|            README for              |
+|====================================\
+|  _________                          \
+| |__  / ___|  ___ _ __ ___  ___ _ __  \
+|   / /\___ \ / __| '__/ _ \/ _ \ '_ \  \
+|  / /_ ___) | (__| | |  __/  __/ | | |  \
+| /____|____/ \___|_|  \___|\___|_| |_|   \
+|==========================================\
+|  Scrot and imgur zenity GUI
+|
+| ZScreen é una semplice interfaccia Zenity per scrot e consente 3 modalitá:
+| 
+| 1. Selezionando un area con il mouse
+| 2. Screenshot immediato a tutto lo schermo
+| 3. Screenshot con un numero impostabile di secondi a tutto lo schermo
+|
+| Dopo la cattura dello schermo esegue, a richiesta, l'upload dell'immagine.
+|
+|=========|
+| AUTHORS |
+|=========|
+|
+|=> Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
+|===> ZScreen Developer (2012.09.02)
+ |====> Twitter: https://twitter.com/#!/Chris_Zeta
+ |====> GitHub: https://github.com/ChrisZeta
+|
+|=> Bart Nagel <bart@tremby.net>
+|===> imgur Developer
+|
+|======|
+| BUGS |
+|======|
+|
+|Ho trovato un bug, dove posso segnalarlo?
+|
+|Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'...
+|Potete segnalarne a <thewebcha@gmail.com> =)
+| 
+|=================================================================================|
+
