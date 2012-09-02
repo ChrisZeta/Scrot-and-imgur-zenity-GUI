@@ -22,9 +22,8 @@ else
 scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Immagini/Screenshot/'
 fi;;
 
-"In n second" ) if zenity --entry --title="Second delay" --text="Enter second of delay:" --entry-text "5"
+"With delay" ) if zenity --entry --title="Second delay" --text="Enter second of delay:" --entry-text "5"
 then echo $?
-
 zenity --question --text "Do you want upload the screenshot?"
 if [ "$?" = "0" ]; then 
 scrot -d $? '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Immagini/Screenshot/ & zimgur ~/Immagini/Screenshot/$f'
