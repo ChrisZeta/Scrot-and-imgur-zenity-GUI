@@ -2,7 +2,7 @@
 
 # zscreen script by Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
 
-ans=$(zenity  --list  --text "Is linux.byexamples.com helpful?" --radiolist  --column "Pick" --column "Options" TRUE "Selected Area... (click & drag mouse)" FALSE "Now" FALSE "With delay"); 
+ans=$(zenity  --list  --text "Screenshot mode" --radiolist  --column "Pick" --column "Options" TRUE "Selected Area... (click & drag mouse)" FALSE "Now" FALSE "With delay"); 
 
 case $ans in
 
