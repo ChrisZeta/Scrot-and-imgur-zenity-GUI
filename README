@@ -7,7 +7,7 @@
 |  / /_ ___) | (__| | |  __/  __/ | | |  \
 | /____|____/ \___|_|  \___|\___|_| |_|   \
 |==========================================\
-|  Scrot and imgur zenity GUI
+|      Scrot and imgur zenity GUI
 |
 | ZScreen é una semplice interfaccia Zenity per scrot e consente 3 modalitá:
 | 
@@ -33,10 +33,10 @@
 | BUGS |
 |======|
 |
-|Ho trovato un bug, dove posso segnalarlo?
+| Ho trovato un bug, dove posso segnalarlo?
 |
-|Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'...
-|Potete segnalarne a <thewebcha@gmail.com> =)
+| Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'...
+| Potete segnalarne a <thewebcha@gmail.com> =)
 | 
 |=================================================================================|
 
