@@ -4,7 +4,7 @@
 
 cd ~
 if [ ! -d "Screenshots" ]
-then mkdir ~/Screenshot
+then mkdir ~/Screenshots
 fi
 
 ans=$(zenity  --list  --text "Screenshot mode" --radiolist  --column "Pick" --column "Options" TRUE "Selected Area... (click & drag mouse)" FALSE "Now" FALSE "With delay"); 
