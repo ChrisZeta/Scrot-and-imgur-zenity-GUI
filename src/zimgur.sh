@@ -96,8 +96,8 @@ fi
 url=$(echo $response | sed -r 's/.*<original_image>(.*)<\/original_image>.*/\1/')
 deleteurl=$(echo $response | sed -r 's/.*<delete_page>(.*)<\/delete_page>.*/\1/')
 xdg-open $url
-zenity --info --text "deleteurl: $deleteurl"
-#imgurl: $url
+#zenity --info --text "imgurl: $url deleteurl: $deleteurl"
+echo $deleteurl >> ~/.zscreen/deleteURL.txt
 
 
 
