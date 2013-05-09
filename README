@@ -15,7 +15,9 @@
 | 2. Screenshot immediato a tutto lo schermo
 | 3. Screenshot con un numero impostabile di secondi a tutto lo schermo
 |
-| Dopo la cattura dello schermo esegue, a richiesta, l'upload dell'immagine.
+| Dopo la cattura dello schermo esegue, a richiesta, l'upload dell'immagine e la mostra sul browser predefinito.
+|
+| I link per cancellare gli screenshot online sono contenuti in ~/.zscreen/deleteURL.txt
 |
 |=========|
 | AUTHORS |
@@ -36,7 +38,7 @@
 | Ho trovato un bug, dove posso segnalarlo?
 |
 | Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'...
-| Potete segnalarne a <thewebcha@gmail.com> =)
+| da segnalare a <thewebcha@gmail.com> =)
 | 
 |=================================================================================|
 
