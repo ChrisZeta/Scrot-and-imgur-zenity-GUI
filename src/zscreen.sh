@@ -2,6 +2,11 @@
 
 # zscreen script by Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
 
+if [ ! -d "$HOME/.zscreen" ]
+then
+mkdir ~/.zscreen
+fi
+
 cd ~
 if [ ! -d "Screenshots" ]
 then mkdir ~/Screenshots
