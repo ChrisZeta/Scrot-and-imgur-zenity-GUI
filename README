@@ -8,6 +8,32 @@
 | /____|____/ \___|_|  \___|\___|_| |_|   \
 |==========================================\
 |      Scrot and imgur zenity GUI
+| 
+| [ENGLISH]
+|
+| ZScreen is a simple zenity GUI for scrot, it allows 3 mode of screenshot:
+| 
+| 1. Select an area with mouse
+| 2. Immediate screenshot on the entire screen screen
+| 3. Screenshot on the entire screen with configurable delay
+|
+| After saving the screenshot, on request, ZScreen upload it and open the url with the
+| default browser.
+|
+| The link for delete online screenshot are contained in ~/.zscreen/deleteURL.txt
+|
+|======|
+| BUGS |
+|======|
+|
+| I found a bug, where can I report it?
+|
+| Sorry, ZScreen has no bugs. But you could meet 'unexpected behavior'
+| to be reported at thewebcha@gmail.com =)
+| 
+|=================================================================================|
+| 
+| [ITALIANO]
 |
 | ZScreen é una semplice interfaccia Zenity per scrot e consente 3 modalitá:
 | 
@@ -15,10 +41,21 @@
 | 2. Screenshot immediato a tutto lo schermo
 | 3. Screenshot con un numero impostabile di secondi a tutto lo schermo
 |
-| Dopo la cattura dello schermo esegue, a richiesta, l'upload dell'immagine e la mostra sul browser predefinito.
+| Dopo la cattura dello schermo esegue, a richiesta, l'upload dell'immagine e la mostra
+| sul browser predefinito.
 |
 | I link per cancellare gli screenshot online sono contenuti in ~/.zscreen/deleteURL.txt
 |
+|======|
+| BUGS |
+|======|
+|
+| Ho trovato un bug, dove posso segnalarlo?
+|
+| Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'
+| da segnalare a <thewebcha@gmail.com> =)
+| 
+|=================================================================================|
 |=========|
 | AUTHORS |
 |=========|
@@ -31,14 +68,4 @@
 |=> Bart Nagel <bart@tremby.net>
 |===> imgur Developer
 |
-|======|
-| BUGS |
-|======|
-|
-| Ho trovato un bug, dove posso segnalarlo?
-|
-| Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'...
-| da segnalare a <thewebcha@gmail.com> =)
-| 
 |=================================================================================|
-
