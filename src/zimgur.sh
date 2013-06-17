@@ -70,11 +70,11 @@ file="$1"
 shift
 
 # check file exists
-if [ ! -f "$file" ]; then
-zenity --info --text "file '$file' doesn't exist, skipping" >&2
-errors=true
-continue
-fi
+#if [ ! -f "$file" ]; then
+#zenity --info --text "file '$file' doesn't exist, skipping" >&2
+#errors=true
+#continue
+#fi
 
 # upload the image
 response=$(curl -F "key=$apikey" -H "Expect: " -F "image=@$file" \
