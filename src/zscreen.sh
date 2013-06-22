@@ -12,7 +12,7 @@ if [ ! -d "Screenshots" ]
 then mkdir ~/Screenshots
 fi
 
-ans=$(zenity --list --text "Screenshot mode" --radiolist --column "Pick" --column "Options" TRUE "Selected Area... (click & drag mouse)" FALSE "Now" FALSE "With delay");
+ans=$(zenity --width 350 --height 220 --list --text "Screenshot mode" --radiolist --column "Pick" --column "Options" TRUE "Selected Area... (click & drag mouse)" FALSE "Now" FALSE "With delay");
 
 case $ans in
 
@@ -32,7 +32,7 @@ else
 scrot -d 1 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'sleep 2 & mv $f ~/Screenshots/'
 fi;;
 
-"With delay" ) d=$(zenity --entry --title="With delay" --text="Enter second of delay:" --entry-text "5")
+"With delay" ) d=$(zenity --entry --title="With delay" --text="Enter seconds of delay:" --entry-text "5")
 zenity --question --text "Do you want upload the screenshot?"
 if [ "$?" = "0" ]; then
 scrot -d "$d" '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'sleep 2 & mv $f ~/Screenshots/ & zimgur ~/Screenshots/$f'
