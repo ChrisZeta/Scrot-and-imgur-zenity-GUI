@@ -8,11 +8,11 @@
 | /____|____/ \___|_|  \___|\___|_| |_|   \
 |==========================================\
 |      Scrot and imgur zenity GUI
-| 
+|
 | [ENGLISH]
 |
 | ZScreen is a simple zenity GUI for scrot, it allows 3 mode of screenshot:
-| 
+|
 | 1. Select an area with mouse
 | 2. Immediate screenshot on the entire screen screen
 | 3. Screenshot on the entire screen with configurable delay
@@ -22,6 +22,22 @@
 |
 | The link for delete online screenshot are contained in ~/.zscreen/deleteURL.txt
 |
+|===============|
+| CONFIGURATION |
+|===============|
+|
+| zscreen can be configured by setting shell variables
+| in the file ~/.zscreen/conf.sh
+|
+| Sample configuration file:
+|
+| # Which directory to put screenshots. Default is $HOME/Screenshots.
+| export ZSCREEN_SCREENSHOT_DIR="$HOME/media/images/screenshots"
+| # Fileformat to use. Default is '%Y-%m-%d--%s_$wx$h_scrot.png'
+| export ZSCREEN_FILEFMT='screenshot_%Y-%m-%d-%H%M%S_$wx$h.png'
+| # Always upload the screenshot? Default is false.
+| export ZSCREEN_ALWAYS_UPLOAD="true"
+|
 |======|
 | BUGS |
 |======|
@@ -30,13 +46,13 @@
 |
 | Sorry, ZScreen has no bugs. But you could meet 'unexpected behavior'
 | to be reported at thewebcha@gmail.com =)
-| 
+|
 |=================================================================================|
-| 
+|
 | [ITALIANO]
 |
 | ZScreen é una semplice interfaccia Zenity per scrot e consente 3 modalitá:
-| 
+|
 | 1. Selezionando un area con il mouse
 | 2. Screenshot immediato a tutto lo schermo
 | 3. Screenshot con un numero impostabile di secondi a tutto lo schermo
@@ -54,7 +70,7 @@
 |
 | Spiacenti, ZScreen non ha bug. Ma potreste incontrare 'comportamenti inaspettati'
 | da segnalare a <thewebcha@gmail.com> =)
-| 
+|
 |=================================================================================|
 |
 |==============|
@@ -76,5 +92,7 @@
 |=> Bart Nagel <bart@tremby.net>
 |===> imgur Developer
 |
+|=> Erik Westrup <erik.westrup@gmail.com>
+|====> GitHub: https://github.com/erikw
 |
 |=================================================================================|
