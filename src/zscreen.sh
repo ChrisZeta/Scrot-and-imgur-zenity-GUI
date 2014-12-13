@@ -20,9 +20,11 @@ read_conf() {
 	if [ -z "$ZSCREEN_SCREENSHOT_DIR" ]; then
 		export ZSCREEN_SCREENSHOT_DIR="$HOME/Screenshots"
 	fi
+
 	if [ -z "$ZSCREEN_FILEFMT" ]; then
 		export ZSCREEN_FILEFMT='%Y-%m-%d--%s_$wx$h_scrot.png'
 	fi
+
 	if [ -z "$ZSCREEN_ALWAYS_UPLOAD" ]; then
 		export ZSCREEN_ALWAYS_UPLOAD="false"
 	fi
@@ -61,19 +63,19 @@ use_scrot() {
 	eval "$cmdline"
 }
 
-
-
 read_conf
 mode=$(ask_mode)
-upload=$(ask_upload)
 case "$mode" in
 	"$opt_clickdrag")
+		upload=$(ask_upload)
 		use_scrot "$upload" "-s"
 		;;
 	"$opt_now")
+		upload=$(ask_upload)
 		use_scrot "$upload" "-d 1"
 		;;
 	"$opt_delay")
+		upload=$(ask_upload)
 		delay=$(ask_delay)
 		use_scrot "$upload" "-d $delay"
 		;;
