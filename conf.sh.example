@@ -1,0 +1,11 @@
+
+# Which directory to put screenshots. Default is $HOME/Screenshots.
+export ZSCREEN_SCREENSHOT_DIR="$HOME/media/images/screenshots"
+# Fileformat to use. Default is '%Y-%m-%d--%s_$wx$h_scrot.png'
+export ZSCREEN_FILEFMT='screenshot_%Y-%m-%d-%H%M%S_$wx$h.png'
+# Always upload the screenshot? Default is false.
+export ZSCREEN_ALWAYS_UPLOAD="true"
+# Set upload provider. the value should either be 'zs3upload' or 'zimgur'
+export ZSCREEN_UPLOAD_CMD='zs3upload'
+# If you are using s3, set this to be the s3 bucket to upload files to
+export ZSCREEN_S3_BUCKET='zscreen-bucket'

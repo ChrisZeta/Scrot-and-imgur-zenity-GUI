@@ -7,7 +7,7 @@
 |  / /_ ___) | (__| | |  __/  __/ | | |  \
 | /____|____/ \___|_|  \___|\___|_| |_|   \
 |==========================================\
-|      Scrot and imgur zenity GUI
+|      Scrot and Imgur/S3 zenity GUI
 |
 | [ENGLISH]
 |
@@ -37,6 +37,9 @@
 | export ZSCREEN_FILEFMT='screenshot_%Y-%m-%d-%H%M%S_$wx$h.png'
 | # Always upload the screenshot? Default is false.
 | export ZSCREEN_ALWAYS_UPLOAD="true"
+| # Set upload provider. the value should either be zs3upload or zimgur.
+| export ZSCREEN_UPLOAD_CMD="zs3upload"
+| export ZSCREEN_S3_BUCKET="zscreen-bucket"
 |
 |======|
 | BUGS |
@@ -79,6 +82,7 @@
 |
 | - scrot
 | - zenity
+| - s3cmd
 |
 |=========|
 | AUTHORS |
@@ -86,13 +90,17 @@
 |
 |=> Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
 |===> ZScreen Developer (2012.09.02)
- |====> Twitter: https://twitter.com/#!/Chris_Zeta
- |====> GitHub: https://github.com/ChrisZeta
+|====> Twitter: https://twitter.com/#!/Chris_Zeta
+|====> GitHub: https://github.com/ChrisZeta
 |
 |=> Bart Nagel <bart@tremby.net>
 |===> imgur Developer
 |
 |=> Erik Westrup <erik.westrup@gmail.com>
 |====> GitHub: https://github.com/erikw
+|
+|=> Hiroshi Fukada <hiroshi@fukada.us>
+|===> Stupid Simple S3 Uploader
+|====> Github: https://github.com/hfukada
 |
 |=================================================================================|
