@@ -17,21 +17,14 @@ read_conf() {
 	fi
 
 	# Set default values.
-	if [ -z "$ZSCREEN_SCREENSHOT_DIR" ]; then
-		export ZSCREEN_SCREENSHOT_DIR="$HOME/Screenshots"
-	fi
-
-	if [ -z "$ZSCREEN_FILEFMT" ]; then
-		export ZSCREEN_FILEFMT='%Y-%m-%d--%s_$wx$h_scrot.png'
-	fi
-
-	if [ -z "$ZSCREEN_ALWAYS_UPLOAD" ]; then
-		export ZSCREEN_ALWAYS_UPLOAD="false"
-	fi
+  export ZSCREEN_SCREENSHOT_DIR=${ZSCREEN_SCREENSHOT_DIR:-"$HOME/Screenshots"}
+  export ZSCREEN_FILEFMT=${ZSCREEN_FILEFMT:-'%Y-%m-%d--%s_$wx$h_scrot.png'}
+  export ZSCREEN_ALWAYS_UPLOAD=${ZSCREEN_ALWAYS_UPLOAD:-"false"}
+  export ZSCREEN_UPLOAD_CMD=${ZSCREEN_UPLOAD_CMD:-'zimgur'}
 
 	if [ ! -d "$ZSCREEN_SCREENSHOT_DIR" ]; then
 		mkdir -p "$ZSCREEN_SCREENSHOT_DIR"
-	fi
+  fi
 }
 
 ask_mode() {
@@ -57,7 +50,7 @@ use_scrot() {
 
 	local cmdline="scrot ${scrotargs} \${ZSCREEN_FILEFMT} -e \"sleep 2 & mv \\"'$'"f ${ZSCREEN_SCREENSHOT_DIR}"
 	if [ "$upload" == "true" ]; then
-		cmdline="$cmdline & zimgur ${ZSCREEN_SCREENSHOT_DIR}/\\"'$'"f"
+		cmdline="$cmdline & $ZSCREEN_UPLOAD_CMD ${ZSCREEN_SCREENSHOT_DIR}/\\"'$'"f"
 	fi
 	cmdline="$cmdline\""
 	eval "$cmdline"
