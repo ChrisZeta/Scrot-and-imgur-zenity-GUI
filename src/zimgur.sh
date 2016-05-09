@@ -27,8 +27,9 @@
 # stderr). If you have xsel or xclip the URLs will also be put on the X
 # selection, which you can usually paste with a middle click.
 
-# API Key provided by Alan@imgur.com
-apikey="b3625162d3418ac51a9ee805b1840452"
+# API Key provided by contato@jeancarlomachado.com.br
+#this client-id is using anonymous upload so the owner has no special access to it
+apikey="df0662a9e5c9cda"
 
 # function to output usage instructions
 function usage {
@@ -77,8 +78,8 @@ while [ $# -gt 0 ]; do
   #fi
 
   # upload the image
-  response=$(curl -F "key=$apikey" -H "Expect: " -F "image=@$file" \
-    http://imgur.com/api/upload.xml 2>/dev/null)
+  response=$(curl -H "Authorization: Client-ID $apikey" -H "Expect: " -F "image=@$file" \
+    https://api.imgur.com/3/upload.xml 2>/dev/null)
   # the "Expect: " header is to get around a problem when using this through
   # the Squid proxy. Not sure if it's a Squid bug or what.
   if [ $? -ne 0 ]; then
@@ -93,11 +94,11 @@ while [ $# -gt 0 ]; do
   fi
 
   # parse the response and output our stuff
-  url=$(echo $response | sed -r 's/.*<original_image>(.*)<\/original_image>.*/\1/')
-  deleteurl=$(echo $response | sed -r 's/.*<delete_page>(.*)<\/delete_page>.*/\1/')
+  url=$(echo $response | sed -r 's/.*<link>(.*)<\/link>.*/\1/')
+  # deleteurl=$(echo $response | sed -r 's/.*<delete_page>(.*)<\/delete_page>.*/\1/')
   xdg-open $url
   #zenity --info --text "imgurl: $url deleteurl: $deleteurl"
-  echo $deleteurl >> ~/.zscreen/deleteURL.txt
+  # echo $deleteurl >> ~/.zscreen/deleteURL.txt
 
 
 
